@@ -1,11 +1,24 @@
+package main.vehicle;
+
+import main.MyIO;
+
 import java.util.Formatter;
 import java.util.Scanner;
 
+/**
+ * Superclass for main.vehicle.Truck
+ */
 public abstract class Vehicle implements MyIO {
 
-    private String rego;
+    private final String rego;
 
-    public Vehicle(){
+    /**
+     * Creates a new vehicle
+     * @param rego Vehicles registration
+     */
+    public Vehicle(String rego){
+
+        this.rego = rego;
 
     }
 
@@ -25,6 +38,6 @@ public abstract class Vehicle implements MyIO {
 
     @Override
     public String toString() {
-        return "";
+        return "Rego: " + rego;
     }
 }
